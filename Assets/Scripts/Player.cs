@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Player : MonoBehaviour
 
     public TMP_Text pvText;
     public float pv;
+
+    public string GameOverScene;
 
     void Start()
     {
@@ -32,5 +35,10 @@ public class Player : MonoBehaviour
 
         pv -= 1 * Time.deltaTime;
         pvText.text = "PV : " + Mathf.Round(pv);
+
+        if (pv <= 0)
+        {
+            SceneManager.LoadScene(GameOverScene);
+        }
     }
 }

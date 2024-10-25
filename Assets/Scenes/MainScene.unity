@@ -851,6 +851,7 @@ MonoBehaviour:
   rb: {fileID: 836022216}
   pvText: {fileID: 699043172}
   pv: 0
+  GameOverScene: GameOver
 --- !u!1 &858178639
 GameObject:
   m_ObjectHideFlags: 0
