@@ -10,4 +10,12 @@ public class Spike : MonoBehaviour
     {
         transform.Translate(Vector2.down * Time.deltaTime * speed);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Player player = collision.gameObject.GetComponent<Player>();
+      
+        player.pv -= 20;
+        Destroy(gameObject);
+    }
 }
