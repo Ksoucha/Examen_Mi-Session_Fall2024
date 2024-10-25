@@ -18,4 +18,7 @@ public class GameOver : MonoBehaviour
         yield return new WaitForSeconds(2.0f);
         SceneManager.LoadScene(MainScene);
     }
+
+    //https://stackoverflow.com/questions/63372547/unity2d-delay-before-scenemanager-loads-the-next-scene
+    //Reference pour la coroutine
 }
