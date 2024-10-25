@@ -6,15 +6,16 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public string MainScene;
+
     void Start()
     {
-        
+        StartCoroutine(ReturnToMainSceneAfterSeconds());
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator ReturnToMainSceneAfterSeconds()
     {
-        //SceneManager.LoadScene();
+        yield return new WaitForSeconds(2.0f);
+        SceneManager.LoadScene(MainScene);
     }
 }
