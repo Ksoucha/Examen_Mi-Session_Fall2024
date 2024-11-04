@@ -15,7 +15,6 @@ public class OxyBox : MonoBehaviour
     {
         Player player = collision.gameObject.GetComponent<Player>();
 
-        
         Vector3 origin = transform.position;
         RaycastHit2D result = Physics2D.Raycast(origin, player.transform.position);
 
